@@ -10,37 +10,39 @@ class ItemList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inventory: [
-        {
-          id: 1,
-          name: "Scented Air Mist",
-          price: 298,
-          img: prod1,
-          description: "description"
-        },
-        {
-          id: 2,
-          name: "Unique Footwear",
-          price: 643,
-          img: prod2,
-          description: "description"
-        },
-        {
-          id: 3,
-          name: "Mystery Aura",
-          price: 842,
-          img: prod3,
-          description: "description"
+      inventory: [],
+      error: null
+    };
+  }
+
+componentDidMount() {
+  this.loadInventory();
+}
+
+  loadInventory() {
+    fetch("http://localhost:3000/inventory/")
+    .then(res => {
+      if(!res.ok) {
+        if (res.status === 404) {
+          this.setState({ error: 'No products found' })
         }
-      ],
-      error: null,
-      isLoading: true,
-      canLoad: true
-    }
+        if(res.status >= 400 && res.status < 500) {
+          return res.json().then(data => {
+            let err = { errorMessage: data.message };
+            throw err;
+          })
+        } else {
+          let err = { errorMessage: 'Please try again later.'};
+          throw err;
+        }
+      }
+      return res.json();
+    })
+    .then(inventory => this.setState({inventory:inventory})); 
   }
 
   render() {
-    const inventory =  this.state.inventory.map((i) => (
+    const inventory = this.state.inventory.map((i) => (
       <Item
       {...i}
       />

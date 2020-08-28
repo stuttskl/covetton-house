@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  /* padding-top: 2em; */
 }
 
 body {
@@ -22,10 +23,12 @@ body {
 }
 
 #item {
+  flex-basis: 33.33%;
   margin: auto;
   text-align: center;
   align-items: center;
   justify-content: center;
+  padding-top: 2em;
 }
 
 #item-name {
@@ -40,7 +43,7 @@ body {
 .item-button {
   height: 4em;
   margin: 1em;
-  display: block;
+  /* display: block; */
   border: cornflowerblue solid .1em;
   width: 14em;
 }

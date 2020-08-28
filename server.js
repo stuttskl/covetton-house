@@ -5,14 +5,14 @@ let mysql = require('./api/dbcon.js');
 
 app.use(express.static("public"))
 
-app.get('/', (req, res) => {
+app.get('/inventory', (req, res) => {
   mysql.pool.query('SELECT * FROM inventory', (err, rows) => {
       if (!err) {
           // console.log(rows);
       } else {
           console.log('Error while performing query');
       }
-      res.render('index', {data: rows})
+      res.send(rows)
   });
 });
 
