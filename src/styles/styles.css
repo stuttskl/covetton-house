@@ -1,0 +1,46 @@
+#inventory-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+#nav-brand {
+  font-family: 'Prata', serif;
+}
+
+.nav-links {
+  padding: .5em;
+  text-transform: uppercase;
+}
+
+.nav-links:hover {
+  text-decoration: none;
+}
+
+#item {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#item-name {
+  color: cornflowerblue;
+  font-family: 'Prata', serif;
+}
+
+#item-img {
+  width: 300px;
+}
+
+.item-button {
+  height: 4em;
+  margin: 1em;
+  display: block;
+  border: cornflowerblue solid .1em;
+  width: 14em;
+}

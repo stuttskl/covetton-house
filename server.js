@@ -1,5 +1,6 @@
 const express = require("express");
 let app = express();
+const mongoose = require("mongoose");
 
 app.use(express.static("public"))
 
