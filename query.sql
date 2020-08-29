@@ -48,3 +48,24 @@ VALUES
   "Saturday: ": "10:00 AM - 7:00 PM", 
   "Sunday: ": "Closed"}'
   );
+
+INSERT INTO `locations` (`name`, `phone`, `img`, `address`, `email`, `hours`)
+VALUES
+('Manhattan, NY', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/man.jpg', '1234 NYC Ave, New York NY 98111', 'nyc@covettonhouse.com', 
+'{
+  "Monday - Friday: " : "9:00 AM - 5:00 PM", 
+  "Saturday: ": "10:00 AM - 7:00 PM", 
+  "Sunday: ": "Closed"}'
+  ),
+  ('Austin, TX', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/aus.jpg', '1234 Austin Ave, Austin TX 98111', 'austin@covettonhouse.com', 
+'{
+  "Monday - Friday: " : "9:00 AM - 5:00 PM", 
+  "Saturday: ": "10:00 AM - 7:00 PM", 
+  "Sunday: ": "Closed"}'
+  ),
+  ('Chicago, IL', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/chi.jpg', '1234 Chicago Ave, Chicago IL 98111', 'chicago@covettonhouse.com', 
+'{
+  "Monday - Friday: " : "9:00 AM - 5:00 PM", 
+  "Saturday: ": "10:00 AM - 7:00 PM", 
+  "Sunday: ": "Closed"}'
+  );

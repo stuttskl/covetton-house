@@ -5,8 +5,8 @@ const LocationCard = ({id, name, address, img, phone, email, hours}) => (
   <div id='item'>
     <h1 id='item-name'>{name}</h1>
     <img id='item-img' src={img}></img>
-    <h3>{address}</h3>
-    <p>{phone} | {email}</p>
+    <h3 className='contact-info'>{address}</h3>
+    <p className='contact-info'>{phone} | {email}</p>
     {/* <p>{hours}</p> */}
   </div>
 )

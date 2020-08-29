@@ -3,6 +3,9 @@ import ItemList from '../Components/ItemList';
 
 export const Home = () => {
   return (
-    <ItemList />
+    <div className='pages'>
+      <h1 className='page-heading'>covetton house</h1>
+      <ItemList />  
+    </div>
   )
 }

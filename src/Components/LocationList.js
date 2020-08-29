@@ -21,7 +21,7 @@ componentDidMount() {
     .then(res => {
       if(!res.ok) {
         if (res.status === 404) {
-          this.setState({ error: 'No products found' })
+          this.setState({ error: 'No locations found' })
         }
         if(res.status >= 400 && res.status < 500) {
           return res.json().then(data => {
