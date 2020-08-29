@@ -17,7 +17,7 @@ componentDidMount() {
 }
 
   loadInventory() {
-    fetch("http://localhost:3000/inventory/")
+    fetch("http://localhost:3000/getInventory/")
     .then(res => {
       if(!res.ok) {
         if (res.status === 404) {

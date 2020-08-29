@@ -26,11 +26,12 @@ export const BootstrapNavbar = () => {
               <Link to="/" className='nav-links' href="#">Home</Link>
               <Link to="/about" className='nav-links' href="#">About</Link>
               <Link to="/locations" className='nav-links' href="#">Locations</Link>
-              <Link to="/contact" className='nav-links' href="#">Contact Us</Link>
+              {/* <Link to="/contact" className='nav-links' href="#">Contact Us</Link> */}
             </Nav>
             <Form inline>
+              <i id='cart' class="fas fa-shopping-cart fa-lg"></i>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success" type="submit">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
@@ -42,9 +43,9 @@ export const BootstrapNavbar = () => {
           <Route path='/locations'>
             <Locations />
           </Route>
-          <Route path='/contact'>
+          {/* <Route path='/contact'>
             <Contact />
-          </Route>
+          </Route> */}
           <Route path='/' exact>
             <Home />
           </Route>

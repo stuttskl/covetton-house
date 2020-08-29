@@ -42,7 +42,7 @@ VALUES
 
 INSERT INTO `locations` (`name`, `phone`, `img`, `address`, `email`, `hours`)
 VALUES
-('Boston, MA', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/bos.jpg', '1234 Boston Ave, Bosta MA 98111', 'boston@covettonhouse.com', 
+('London, UK', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/lon.jpg', '1234 London Ave, London UK 98111', 'london@covettonhouse.com', 
 '{
   "Monday - Friday: " : "9:00 AM - 5:00 PM", 
   "Saturday: ": "10:00 AM - 7:00 PM", 

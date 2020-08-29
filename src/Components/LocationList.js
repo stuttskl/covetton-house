@@ -17,7 +17,7 @@ componentDidMount() {
 }
 
   loadLocations() {
-    fetch("http://localhost:3000/locations/")
+    fetch("http://localhost:3000/getLocations")
     .then(res => {
       if(!res.ok) {
         if (res.status === 404) {

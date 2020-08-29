@@ -71,3 +71,7 @@ body {
 .contact-info {
   /* padding: 2em; */
 }
+
+.fa, .fas {
+  padding: 0 2em 0 2em;
+}

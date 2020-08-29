@@ -1,11 +1,10 @@
 const express = require("express");
 let app = express();
-const mongoose = require("mongoose");
 let mysql = require('./api/dbcon.js');
 
 app.use(express.static("public"))
 
-app.get('/inventory', (req, res) => {
+app.get('/getInventory', (req, res) => {
   mysql.pool.query('SELECT * FROM inventory', (err, rows) => {
       if (!err) {
           // console.log(rows);
@@ -16,7 +15,7 @@ app.get('/inventory', (req, res) => {
   });
 });
 
-app.get('/locations', (req, res) => {
+app.get('/getLocations', (req, res) => {
     mysql.pool.query('SELECT * FROM locations', (err, rows) => {
         if (!err) {
             // console.log(rows);
@@ -25,8 +24,19 @@ app.get('/locations', (req, res) => {
         }
         res.send(rows)
     });
-})
+});
 
+// app.use('/inventory', require('./api/routes/inventory'));
+
+app.use((req, res) => {
+    res.status(404);
+});
+
+app.use((err, req, res, next) => {
+    console.err(err.stack);
+    res.type('plain/text');
+    res.status(500);
+});
 
 // app.get('/', (req, res) => {
 //   res.render("index");
