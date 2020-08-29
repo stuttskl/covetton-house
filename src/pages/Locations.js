@@ -1,8 +1,11 @@
 import React from 'react';
-import LocationList from '../Components/LocationCard';
+import LocationList from '../Components/LocationList';
+import LocationCard from '../Components/LocationCard';
 
 export const Locations = () => {
   return (
-    <h1>Locations</h1>
+    <div className='pages'>
+      <LocationList />
+    </div>
   )
 }

@@ -47,3 +47,23 @@ body {
   border: cornflowerblue solid .1em;
   width: 14em;
 }
+
+#about-img {
+  width: 80%;
+}
+
+.page-heading {
+  text-transform: uppercase;
+}
+
+.pages {
+  display: block;
+  padding: 3em;
+  text-align: center;
+}
+
+.main-content {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
