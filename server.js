@@ -16,6 +16,17 @@ app.get('/inventory', (req, res) => {
   });
 });
 
+app.get('/locations', (req, res) => {
+    mysql.pool.query('SELECT * FROM locations', (err, rows) => {
+        if (!err) {
+            // console.log(rows);
+        } else {
+            console.log('Error while performing query');
+        }
+        res.send(rows)
+    });
+})
+
 
 // app.get('/', (req, res) => {
 //   res.render("index");

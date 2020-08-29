@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import '../styles/styles.css';
 
 import Item from './Item';
-import prod1 from '../constants/images/prod1.jpg'
-import prod2 from '../constants/images/prod2.jpg'
-import prod3 from '../constants/images/prod3.jpg'
 
 class ItemList extends Component {
   constructor(props) {

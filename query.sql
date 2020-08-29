@@ -12,6 +12,39 @@ CREATE TABLE `inventory` (
 
 INSERT INTO `inventory` (`name`, `quantity`, `price`, `img`, `desc`, `location`)
 VALUES
-('Scented Air Mist', 3, 234, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod1.jpg', 'Smells great!', 1),
-('Unique Footwear', 7, 215, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod2.jpg', 'Seven unique pairs of shoes', 2),
-('Mystery Aura ', 10, 23, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod3.jpg', 'Not even the creator knows what is in this', 3);
+('Bro Serum', 5, 87, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod4.jpg', 'Serum for your bro!', 1),
+('Mystic Crystal', 13, 799, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod5.jpg', 'Balance your body\'s natural pH levels with this rare gem', 1),
+('Enamel Scrubbers', 23, 98, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod6.jpg', 'Cleanse and polish your mouth enamel with these artisan brushes', 2);
+
+https://covetton-house.s3-us-west-2.amazonaws.com/prod4.jpg
+https://covetton-house.s3-us-west-2.amazonaws.com/prod5.jpg
+https://covetton-house.s3-us-west-2.amazonaws.com/prod6.jpg
+
+CREATE TABLE `locations` (
+  `locationID`   int(10) unsigned  NOT NULL AUTO_INCREMENT,
+  `name`         varchar(225)      NOT NULL DEFAULT '',
+  `phone`        int(10) unsigned  NOT NULL DEFAULT '0',
+  `img`          varchar(225)      NOT NULL DEFAULT '',
+  `address`      varchar(225)      NOT NULL DEFAULT '',
+  `email`        varchar(30)       NOT NULL DEFAULT '',
+  `hours`        json              DEFAULT NULL,
+  PRIMARY KEY (`locationID`)
+);
+
+INSERT INTO `locations` (`name`, `phone`, `img`, `address`, `email`, `hours`)
+VALUES
+('Seattle, WA', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/sea.jpg', '1234 Seattle Ave, Seattle WA 98111', 'seattle@covettonhouse.com', 
+'{
+  "Monday - Friday: " : "9:00 AM - 5:00 PM", 
+  "Saturday: ": "10:00 AM - 7:00 PM", 
+  "Sunday: ": "Closed"}'
+  );
+
+INSERT INTO `locations` (`name`, `phone`, `img`, `address`, `email`, `hours`)
+VALUES
+('Boston, MA', 2063433432, 'https://covetton-house.s3-us-west-2.amazonaws.com/bos.jpg', '1234 Boston Ave, Bosta MA 98111', 'boston@covettonhouse.com', 
+'{
+  "Monday - Friday: " : "9:00 AM - 5:00 PM", 
+  "Saturday: ": "10:00 AM - 7:00 PM", 
+  "Sunday: ": "Closed"}'
+  );

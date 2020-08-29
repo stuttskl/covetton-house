@@ -9,22 +9,24 @@ import {
 import { About } from '../pages/About';
 import { Locations } from '../pages/Locations';
 import { Contact } from '../pages/Contact';
+import { Home } from '../pages/Home';
 
-import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
+
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 export const BootstrapNavbar = () => {
     return (
      <div>
        <Router>
         <Navbar bg='light' expand='lg'>
-          <Navbar.Brand id='nav-brand' href="#home">C | H</Navbar.Brand>
+          <Navbar.Brand id='nav-brand' href="/">C | H</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className='mr-auto'>
-              <Link to="/" className='nav-links' href="#home">Home</Link>
-              <Link to="/about" className='nav-links' href="#link">About</Link>
-              <Link to="/locations" className='nav-links' href="#link">Locations</Link>
-              <Link to="/contact" className='nav-links' href="#link">Contact Us</Link>
+              <Link to="/" className='nav-links' href="#">Home</Link>
+              <Link to="/about" className='nav-links' href="#">About</Link>
+              <Link to="/locations" className='nav-links' href="#">Locations</Link>
+              <Link to="/contact" className='nav-links' href="#">Contact Us</Link>
             </Nav>
             <Form inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -42,6 +44,9 @@ export const BootstrapNavbar = () => {
           </Route>
           <Route path='/contact'>
             <Contact />
+          </Route>
+          <Route path='/' exact>
+            <Home />
           </Route>
         </Switch>
       </Router>

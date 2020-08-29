@@ -1,0 +1,57 @@
+import React, { Component } from 'react';
+import '../styles/styles.css';
+
+import LocationCard from './LocationCard';
+
+class LocationList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      locations: [
+        {"locationID":1,"name":"Seattle, WA","phone":2063433432,"img":"https://covetton-house.s3-us-west-2.amazonaws.com/sea.jpg","address":"1234 Seattle Ave, Seattle WA 98111","email":"seattle@covettonhouse.com","hours":"{\"Sunday: \": \"Closed\", \"Saturday: \": \"10:00 AM - 7:00 PM\", \"Monday - Friday: \": \"9:00 AM - 5:00 PM\"}"},{"locationID":2,"name":"Boston, MA","phone":2063433432,"img":"https://covetton-house.s3-us-west-2.amazonaws.com/bos.jpg","address":"1234 Boston Ave, Bosta MA 98111","email":"boston@covettonhouse.com","hours":"{\"Sunday: \": \"Closed\", \"Saturday: \": \"10:00 AM - 7:00 PM\", \"Monday - Friday: \": \"9:00 AM - 5:00 PM\"}"}
+      ],
+      error: null
+    };
+  }
+
+componentDidMount() {
+  this.loadLocations();
+}
+
+  loadLocations() {
+    fetch("http://localhost:3000/inventory/")
+    .then(res => {
+      if(!res.ok) {
+        if (res.status === 404) {
+          this.setState({ error: 'No products found' })
+        }
+        if(res.status >= 400 && res.status < 500) {
+          return res.json().then(data => {
+            let err = { errorMessage: data.message };
+            throw err;
+          })
+        } else {
+          let err = { errorMessage: 'Please try again later.'};
+          throw err;
+        }
+      }
+      return res.json();
+    })
+    .then(locations => this.setState({locations:locations})); 
+  }
+
+  render() {
+    const locations = this.state.locations.map((i) => (
+      <LocationCard
+        {...i}
+      />
+    ))
+    return (
+      <div id='inventory-list'>
+        {locations}
+      </div>
+    )
+  }
+}
+
+export default LocationList;
