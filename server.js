@@ -15,7 +15,7 @@ app.get('/getInventory', (req, res) => {
   });
 });
 
-app.get('/getLocations', (req, res) => {
+app.get('/locations', (req, res) => {
     mysql.pool.query('SELECT * FROM locations', (err, rows) => {
         if (!err) {
             // console.log(rows);
@@ -38,9 +38,13 @@ app.use((err, req, res, next) => {
     res.status(500);
 });
 
-// app.get('/', (req, res) => {
-//   res.render("index");
-// });
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname, './public/index.html'), function(err) {
+//       if (err) {
+//         res.status(500).send(err)
+//       }
+//     });
+//   });
 
 
 app.listen(3000, () => console.log("listning on port 3000"));

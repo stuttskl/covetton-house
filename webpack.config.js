@@ -43,7 +43,9 @@ module.exports = {
         publicPath: "/"
     }, 
     plugins: [
-        //new webpack.HotModuleReplacementPlugin(),
+        new webpack.HotModuleReplacementPlugin({
+          template: './public/index.html'
+        }),
     ],
     devServer: {
         hot: true,
