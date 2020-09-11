@@ -1,14 +1,20 @@
 CREATE TABLE `inventory` (
-  `productID`    int(10) unsigned  NOT NULL AUTO_INCREMENT,
-  `name`         varchar(225)      NOT NULL DEFAULT '',
-  `quantity`     int(10) unsigned  NOT NULL DEFAULT '0',
-  `price`        decimal(7,2)      NOT NULL DEFAULT '99999.99',
-  `img`          varchar(225)      NOT NULL DEFAULT '',
-  `desc`         varchar(225)      NOT NULL DEFAULT '',
-  `location`     varchar(225)      NOT NULL DEFAULT '',
+  `productID`    int(10)   NOT NULL AUTO_INCREMENT,
+  `name`         text(225)      NOT NULL DEFAULT '',
+  `quantity`     int(10)   NOT NULL DEFAULT '0',
+  `price`        float(7,2)      NOT NULL DEFAULT '99999.99',
+  `img`          text(225)      NOT NULL DEFAULT '',
+  `desc`         text(225)      NOT NULL DEFAULT '',
+  `location`     text(225)      NOT NULL DEFAULT '',
   PRIMARY KEY (`productID`)
 );
 ; ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+INSERT INTO INVENTORY (productID, name, quantity, price, img, desc, locationID) VALUES (
+   1, 'Bro Serum', 5, 97, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod4.jpg', 'Serum for your bro!', 2);
+INSERT INTO INVENTORY (productID, name, quantity, price, img, desc, locationID) VALUES (2, 'Mystic Crystal', 12, 788, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod5.jpg', 'Balance your body\'s natural pH levels with this rare gem', 1);
+INSERT INTO INVENTORY (productID, name, quantity, price, img, desc, locationID) VALUES (3, 'Enamel Scrubbers', 23, 98, 'https://covetton-house.s3-us-west-2.amazonaws.com/prod6.jpg', 'Cleanse and polish your mouth enamel with these artisan brushes', 2);
+
 
 INSERT INTO `inventory` (`name`, `quantity`, `price`, `img`, `desc`, `location`)
 VALUES
