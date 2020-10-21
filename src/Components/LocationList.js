@@ -13,7 +13,7 @@ class LocationList extends Component {
           name: "Seattle, WA",
           address: "1234 Pike Ave, Seattle WA 98111",
           img: "https://covetton-house.s3-us-west-2.amazonaws.com/sea.jpg",
-          phone: 206-343-3432,
+          phone: 2063433432,
           email: "seattle@covettonhouse.com",
         },
         {
@@ -21,7 +21,7 @@ class LocationList extends Component {
           name: "London, UK",
           address: "1234 Main Ave, London, UK 98111",
           img: "https://covetton-house.s3-us-west-2.amazonaws.com/lon.jpg",
-          phone: 206-343-3432,
+          phone: 2063433432,
           email: "london@covettonhouse.com",
         },
         {
@@ -29,7 +29,7 @@ class LocationList extends Component {
           name: "Manhattan, NY",
           address: "1234 Wall St, New York, NY 98111",
           img: "https://covetton-house.s3-us-west-2.amazonaws.com/man.jpg",
-          phone: 206-343-3432,
+          phone: 2063433432,
           email: "nyc@covettonhouse.com",
         },
         {
@@ -37,7 +37,7 @@ class LocationList extends Component {
           name: "Austin, TX",
           address: "1234 6th Ave, Austin, TX 98111",
           img: "https://covetton-house.s3-us-west-2.amazonaws.com/aus.jpg",
-          phone: 206-343-3432,
+          phone: 2063433432,
           email: "austin@covettonhouse.com",
         },
         {
@@ -45,7 +45,7 @@ class LocationList extends Component {
           name: "Chicago, IL",
           address: "1234 Main Ave, Chicago, IL 98111",
           img: "https://covetton-house.s3-us-west-2.amazonaws.com/chi.jpg",
-          phone: 206-343-3432,
+          phone: 2063433432,
           email: "chicago@covettonhouse.com",
         }
       ],
