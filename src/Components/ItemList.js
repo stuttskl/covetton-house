@@ -29,6 +29,27 @@ class ItemList extends Component {
           img: "https://covetton-house.s3-us-west-2.amazonaws.com/prod4.jpg",
           desc: "Be forever young with just three droplets of this serum!"
         },
+        {
+          id: 4, 
+          name: "Scented H20 Mist",
+          price: 235, 
+          img: "https://covetton-house.s3-us-west-2.amazonaws.com/prod1.jpg", 
+          desc: "Smell like a freshly blossomed rose with a spritz of this product!"
+        },
+        {
+          id: 5, 
+          name: "A Lot of Beige Shoes", 
+          price: 438, 
+          img: "https://covetton-house.s3-us-west-2.amazonaws.com/prod2.jpg", 
+          desc: "Have the most stylish feet with this lot of single beige shoes (pairs not included)"
+        },
+        {
+          id: 6, 
+          name: "Mystery Product",
+          price: 100, 
+          img: "https://covetton-house.s3-us-west-2.amazonaws.com/prod3.jpg",
+          desc: "Take a risk and purchase this mystery product! You'll never know what you'll get!"
+        }
       ],
       error: null
     };
