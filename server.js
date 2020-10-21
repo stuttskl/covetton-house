@@ -1,7 +1,7 @@
 const express = require("express");
 let app = express();
 let mysql = require('./api/dbcon.js');
-
+const DEFAULT_PORT = process.env.PORT || 3000; // Heroku uses a dynamic port. 
 app.use(express.static("public"))
 
 app.get('/getInventory', (req, res) => {
@@ -47,4 +47,4 @@ app.use((err, req, res, next) => {
 //   });
 
 
-app.listen(3000, () => console.log("listning on port 3000"));
+app.listen(DEFAULT_PORT, () => console.log("listning on port:", DEFAULT_PORT));
