@@ -17,7 +17,7 @@ componentDidMount() {
 }
 
   loadLocations() {
-    fetch("http://localhost:3000/locations/")
+    fetch("https://covetton-house-fe.herokuapp.com/locations/")
     .then(res => {
       if(!res.ok) {
         if (res.status === 404) {
