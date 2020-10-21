@@ -6,6 +6,9 @@ Inspired by Stephen Colbert's luxury line inspired by Gwyneth Paltrow's lifestyl
 
 ![](covetton-house.gif)
 
+## Motivation
+My motivation for this project was to continue to learn React and gain more practice developing full stack applications. I have integrated a SQL database on the backend, and utilized AWS S3 to store static image data. Additionally, I wanted to practice my front-end development and design muscles. I utilized Figma to create the design of the landing page, then created each component using React.
+
 ## How to Run This
 Navigate to a directory with a terminal and clone this repo:
 ```
