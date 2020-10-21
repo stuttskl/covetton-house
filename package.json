@@ -7,10 +7,8 @@
     "start": "node server.js",
     "start-watch": "nodemon --exec babel-node server.js --ignore 'src'",
     "simple-run": "babel-node server.js",
-    "build": "webpack --mode development --config webpack.dev.js",
-    "build-watch": "webpack --watch --mode development --config webpack.dev.js",
-    "build-prod": "webpack --config webpack.prod.js",
-    "heroku-postbuild": "webpack -p"
+    "build": "webpack --mode development",
+    "build-watch": "webpack --watch --mode development"
   },
   "repository": {
     "type": "git",
@@ -55,6 +53,7 @@
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^5.2.0"
   }
 }
